@@ -27,6 +27,7 @@ public class EnemyShipsNest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(name);
         transform.Translate(xSpeed * xDirection * Time.deltaTime, enemyShipSpeed * -1 * Time.deltaTime, 0, Space.World);
         int random = Random.Range(1, upperRandomRange);
 
@@ -172,14 +173,10 @@ public class EnemyShipsNest : MonoBehaviour
             }
         }
 
-            if (collider.name.Equals("LeftWall") || collider.name.Equals("RightWall"))
+        if (collider.name.Equals("LeftWall") || collider.name.Equals("RightWall"))
         {
             xDirection *= -1;
         }
-        //if (collider.name.Equals("BottomWall"))
-        //{
-        //    Destroy(this.gameObject, 2f);
-        //}
     }
 
     private void OnBecameInvisible()

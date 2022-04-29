@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ChildrenShipController : MonoBehaviour
 {
-    public GameObject enemyBullet;
-    public GameObject Explosion;
-    public int upperRandomRange;
-    private int numHit = 0;
+    public GameObject enemyBullet;//bullet prefab
+    public GameObject Explosion;    //exlosion prefab
+    public int upperRandomRange;    
+    private int numHit = 0; //nums of Take damage
     Color floolThree = new Color(4.0f / 255.0f, 56.0f / 255.0f, 253.0f / 255.0f, 1);
     Color floolTwo = new Color(139.0f / 255.0f, 90.0f / 255.0f, 189.0f / 255.0f, 1);
     Color floolOne = new Color(255.0f / 255.0f, 0f / 255.0f, 0f / 255.0f, 1);
@@ -141,16 +141,11 @@ public class ChildrenShipController : MonoBehaviour
                     Destroy(explosion, 1f);
                 }
             }
-            //Destroy(this.gameObject);
-            //Destroy(collider2D.gameObject);
-            //GameObject explosion = Instantiate(Explosion);
-            //explosion.transform.position = transform.position;
-            //Destroy(explosion, 1f);
         }
     }
 
     private void OnBecameInvisible()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }
