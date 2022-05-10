@@ -41,7 +41,7 @@ public class GameState : MonoBehaviour
         //    reBorn = false;
         //}
 
-        Debug.Log("PlayerLifes:" + playerLifes.ToString());
+        //Debug.Log("PlayerLifes:" + playerLifes.ToString());
     }
 
     public void ChangePlayerLifes(int changeLife) {
